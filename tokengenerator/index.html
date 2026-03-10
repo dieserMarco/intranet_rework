@@ -1,14 +1,60 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimal</title>
+  <title>Intranet UI Grundlage</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>Hallo Welt</h1>
-  <button id="btn">Klick mich</button>
+<body class="app">
+  <div class="bg">
+    <div class="bg__overlay"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand__badge"><img src="resources/logo.svg" alt="Logo" /></div>
+      <div>
+        <div class="brand__title">Freiwillige Feuerwehr Wiener Neustadt</div>
+        <div class="brand__sub">Einheitliches Intranet-Layout</div>
+      </div>
+    </div>
+
+    <button id="themeToggle" class="theme" type="button" aria-label="Theme wechseln">
+      <span class="theme__dot"></span>
+      <span id="themeLabel" class="theme__label">Dark</span>
+    </button>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="card__head">
+        <h1>Seitenvorlage</h1>
+        <p class="muted">Diese Basis kannst du für neue Seiten 1:1 wiederverwenden.</p>
+      </div>
+      <div class="card__body">
+        <form id="memberForm">
+          <div class="formGrid">
+            <div class="field">
+              <label for="firstName">Vorname</label>
+              <input id="firstName" name="firstName" required />
+            </div>
+            <div class="field">
+              <label for="lastName">Nachname</label>
+              <input id="lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="submit">In DB speichern (Beispiel)</button>
+          </div>
+        </form>
+
+        <div id="msgOk" class="msg" role="status"></div>
+        <div id="msgErr" class="msg msg--err" role="alert"></div>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
