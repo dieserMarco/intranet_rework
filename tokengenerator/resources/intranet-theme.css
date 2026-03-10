@@ -1,9 +1,0 @@
-:root {
-  --ff-text: rgba(255, 255, 255, 0.92);
-  --ff-line: rgba(255, 255, 255, 0.14);
-}
-
-[data-theme="light"] {
-  --ff-text: rgba(10, 14, 25, 0.92);
-  --ff-line: rgba(10, 14, 25, 0.1);
-}
